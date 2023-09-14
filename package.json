@@ -1,5 +1,5 @@
 {
-  "name": "tom-select",
+  "name": "@vicvega/tom-select",
   "keywords": [
     "select",
     "ui",
@@ -16,14 +16,15 @@
   "types": "dist/types/tom-select.complete.d.ts",
   "description": "Tom Select is a versatile and dynamic <select> UI control. Forked from Selectize.js to provide a framework agnostic autocomplete widget with native-feeling keyboard navigation, it's useful for tagging, contact lists, country selectors, etc.",
   "homepage": "https://tom-select.js.org",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "files": [
     "/dist",
     "/src"
   ],
   "author": "Josh Schmidt (https://github.com/oyejorge)",
   "contributors": [
-    "Brian Reavis <brian@thirdroute.com>"
+    "Brian Reavis <brian@thirdroute.com>",
+    "Francesco Coda Zabetta <francesco.codazabetta@gmail.com>"
   ],
   "license": "Apache-2.0",
   "repository": {
@@ -66,7 +67,7 @@
     "jquery": "^3.6.0",
     "jsdom": "^20.0.0",
     "karma": "^6.3.17",
-    "karma-accessibility-checker": "^3.1.5",
+    "karma-accessibility-checker": "^3.1.57",
     "karma-browserstack-launcher": "^1.6.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^3.1.0",
