@@ -120,5 +120,5 @@ git commit -a -m "v$VERSION Release"
 git tag "v$VERSION"
 git push origin "$BRANCH"
 git push origin --tags
-npm publish
+npm publish --access public
 echo "\033[32mv${VERSION} released\033[0;39m"
