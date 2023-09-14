@@ -1,0 +1,134 @@
+<!DOCTYPE html><html class="no-js" lang="en"><head>
+		<meta charset="utf-8">
+		<title> Migrating to v2 -  Tom Select</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/css/stylesheet.css">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet" media="print" id="prism-css">
+		
+
+		
+		<script src="/js/tom-select.complete.min.js"></script>
+		
+
+		<script src="/js/index.bundle.js"></script>
+		
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self';img-src https://* data:;style-src 'self' unpkg.com cdnjs.cloudflare.com cdn.jsdelivr.net;script-src 'self' 'unsafe-eval' mc.yandex.ru cdn.jsdelivr.net 'sha256-f0siOSaHuBl9HM/PAuPWEGfaasKD5P5LQPQi3fUeQyI=';font-src 'self' cdnjs.cloudflare.com;connect-src api.github.com whatcms.org api.reddit.com mc.yandex.ru https://*.algolia.net https://*.algolianet.com"></head>
+    <body>
+
+		
+		<a id="toggle-offcanvas" aria-label="Toggle Off-Canvas Menu">
+			<i class="ib feather-menu"></i>
+		</a>
+
+
+
+
+		
+		<div id="offcanvas" class="d-flex flex-column px-0">
+
+			<div id="docsearch-div" class="px-4">
+				<input type="text" class="form-control" placeholder="Search" id="docsearch-input">
+			</div>
+
+			<div id="offcanvas-inner">
+				<div class="d-flex flex-column">
+					
+
+	<a href="/" class="h5 my-0 px-4 py-3 d-block">Home</a>
+
+	
+
+
+	<a href="/examples/" class="h5 px-4 py-3 my-0 d-block">Examples</a>
+	
+
+	<a href="/plugins/" class="h5 px-4 py-3 my-0 d-block">Plugins</a>
+	
+
+
+	<a href="/docs" class="h5 px-4 py-3 my-0 d-block">Docs</a>
+	
+	<div>
+		<a class="nav-link" href="/docs/">Usage</a>
+		<a class="nav-link" href="/docs/api/">API</a>
+		<a class="nav-link" href="/docs/plugins/">Plugins</a>
+		<a class="nav-link" href="/docs/events/">Events</a>
+		<a class="nav-link" href="/docs/contribute/">Contribute</a>
+		<span class="nav-link active">Migration</span>
+		<a class="nav-link" href="/docs/selectize.js/">selectize.js</a>
+	</div>
+	
+
+	<hr class="m-4">
+
+	<a href="https://github.com/orchidjs/tom-select" class="h5 px-4 py-3 my-0 d-block">GitHub</a>
+	<a href="https://www.npmjs.com/package/tom-select" class="h5 px-4 py-3 my-0 d-block">NPM</a>
+
+
+	<div class="mt-auto"></div>
+
+	<br class="mx-4 mb-2 mt-4">
+
+	<div class="p-4 badges small">
+		<a href="https://github.com/orchidjs/tom-select/blob/master/./doc_src/pages/docs/migration.md">Edit this page on GitHub</a>
+		<div class="mt-2"><a href="https://github.com/orchidjs/tom-select/graphs/contributors">© 2023 Contributors</a></div>
+	</div>
+
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="px-3 main-col">
+			<div class="container pt-4 mt-3" id="main-container">
+				
+				<h1 class="display-4 mt-0" id="migrating-to-v2">Migrating to v2</h1>
+				
+
+				<p>Review changes to the Tom Select API to help you migrate from v1 to v2.</p>
+<h2 id="core">Core</h2>
+<ul>
+<li>Caret position functionality (using <kbd>←</kbd> and <kbd>→</kbd> arrow keys to move between selected items) moved to caret_position plugin</li>
+<li><code>addOption()</code> no longer treats new options as "user created" (see <a href="https://tom-select.js.org/docs/#persist">persist</a> option) by default. Use <code>addOption(option, true)</code> for registering user created options.</li>
+<li>Closing control via <kbd>esc</kbd> key, <kbd>enter</kbd>, etc no longer blurs focus to maintain keyboard control</li>
+<li>Added sync() method</li>
+<li>Original &lt;input&gt; or &lt;select&gt; element uses 'hidden-accessible' styling instead of 'hidden'</li>
+<li>controlInput=null instead of controlInput='&lt;input&gt;' for hidden control input</li>
+<li>Deprecated isInvalid. Use isValid instead</li>
+<li>Removed support for <code>querySelector('option[selected]')</code>. Use <code>querySelector('option:checked')</code> instead</li>
+<li>Removed renderCache</li>
+</ul>
+<h2 id="css">CSS</h2>
+<ul>
+<li>Renamed <code>.ts-control</code> to <code>.ts-wrapper</code> to align css class with name in JavaScript</li>
+<li>Renamed <code>.ts-input</code> to <code>.ts-control</code> to align css class with name in JavaScript</li>
+<li>Multiple CSS classes are now toggled on the wrapper element instead of the control element: <code>.focus</code>, <code>.disabled</code>, <code>.required</code>, <code>.invalid</code>, <code>.locked</code>, <code>.full</code>, <code>.not-full</code>, <code>.input-active</code>, <code>.dropdown-active</code>, <code>.has-options</code>, <code>.has-items</code></li>
+<li>Removed bootstrap3 style</li>
+</ul>
+<h2 id="settings">Settings</h2>
+<ul>
+<li><code>copyClassesToDropdown</code> defaults to false</li>
+</ul>
+
+				
+				
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+		<script> docsearch({
+			apiKey: '662e3a3a9d206ebad6d19f341b85acbd',
+			indexName: 'tom-select',
+			inputSelector: '#docsearch-input',
+			debug: false // Set debug to true if you want to inspect the dropdown
+		});
+		</script>
+
+
+		
+	
+
+</body></html>
